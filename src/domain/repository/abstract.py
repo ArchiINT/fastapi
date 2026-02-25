@@ -3,8 +3,6 @@ from typing import Generic, List
 
 from typing_extensions import TypeVar
 
-from api.domain.item.models import ItemUpdateDTO
-
 TEntity = TypeVar("TEntity")
 TId = TypeVar("TId")
 TCreateDTO = TypeVar("TCreateDTO")
