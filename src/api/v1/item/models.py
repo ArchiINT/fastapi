@@ -2,13 +2,13 @@ from pydantic import BaseModel
 
 
 class ItemSchema(BaseModel):
-    id: int | int = None
+    id: int
     title: str
 
-class ItemCreateSchema(ItemSchema):
-    ...
-class ItemUpdateSchema(ItemSchema):
-    ...
-class ItemListSchema(BaseModel):
-    id: None | int = None
-    title: str = 'Title'
+
+class ItemCreateSchema(BaseModel):
+    title: str
+
+
+class ItemUpdateSchema(BaseModel):
+    title: str | None = None

@@ -41,7 +41,7 @@ class InMemoryItemRepository(AbstractItemRepository):
 
     def update(self, item_id: int, dto: ItemUpdateDTO) -> Item:
         if item_id not in self._storage:
-            return ItemNotFoundError(item_id)
+            raise ItemNotFoundError(item_id)
 
         existing = self._storage[item_id]
         updated = Item(
@@ -54,6 +54,6 @@ class InMemoryItemRepository(AbstractItemRepository):
 
     def delete(self, item_id: int) -> None:
         if item_id not in self._storage:
-            return ItemNotFoundError(item_id)
+            raise ItemNotFoundError(item_id)
         del self._storage[item_id]
 
