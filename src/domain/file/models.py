@@ -5,6 +5,7 @@ from typing import Optional
 class File():
     id: int
     name: str
+    path: str
 
 @dataclass(slots=True)
 class FileCreateDTO():

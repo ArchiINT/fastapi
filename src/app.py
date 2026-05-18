@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from api.v1.router import router as item_router
+from api.v1.router import router as api_router
 
 app = FastAPI()
 
-app.include_router(item_router)
+app.include_router(api_router)
 
